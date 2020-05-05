@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="main">
+        <div>
+            <div align="center">
+            <img src="assets/saylani-logo.png" alt="saylani-logo">
+            </div>
+            <h1 align="center"> Student Registration Form</h1>
+        </div>
+        <div class="form">
+        <form action="submit.html">
+            <div class="form-group">
+                <label for="fname" class="bmd-label-floating">First Name</label>
+                <input type="text" class="form-control" id="fname" maxlength="30">
+                <span class="bmd-help">(Max 30 Character a-z and A-Z)</span>
+              </div>
+              <div class="form-group">
+                <label for="lname" class="bmd-label-floating">Last Name</label>
+                <input type="text" class="form-control" id="lname" maxlength="30">
+                <span class="bmd-help">(Max 30 Character a-z and A-Z)</span>
+              </div>
+              <div class="form-group">
+                <label for="DateOfBirth" class="bmd-label-static">Date of Birth</label>
+                <input type="date" class="form-control" id="DateOfBirth">
+                <span class="bmd-help"></span>
+              </div>
+              <div class="form-group">
+                <label for="Mnumber" class="bmd-label-floating">Mobile Number</label>
+                <input type="number" class="form-control" id="Mnumber" max="9999999999">
+                <span class="bmd-help">(Max 10 digit)</span>
+              </div>
+              <div class="form-group">
+                <label for="lname" class="bmd-label-floating">Last Name</label>
+                <input type="text" class="form-control" id="lname">
+                <span class="bmd-help">(Max 30 Character a-z and A-Z)</span>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1" class="bmd-label-floating">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1">
+                <span class="bmd-help">We'll never share your email with anyone else.</span>
+              </div>
+              <div class="radio">
+                   <p>Gender</p> 
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  Male
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  Female
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="exampleTextarea" class="bmd-label-floating">Address</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="postalCode" class="bmd-label-floating">Postal Code</label>
+                <input type="number" class="form-control" id="postalCode" max="999999">
+                <span class="bmd-help">(Max 6 digit)</span>
+              </div>
+              <div class="form-group">
+                <label for="city" class="bmd-label-floating">City</label>
+                <input type="text" class="form-control" id="city">
+                <span class="bmd-help">(Max 30 Character a-z and A-Z)</span>
+              </div>
+              <div class="form-group">
+                <label for="state" class="bmd-label-floating">State</label>
+                <input type="text" class="form-control" id="state">
+                <span class="bmd-help">(Max 30 Character a-z and A-Z)</span>
+              </div>
+              <div class="form-group">
+                <label for="country" class="bmd-label-floating">Country</label>
+                <input type="text" class="form-control" id="country">
+                <span class="bmd-help">(Max 30 Character a-z and A-Z)</span>
+              </div>
+              <div class="form-group">
+                  Hobbies: 
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Gaming
+                    </label>
+                  </div> 
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Reading
+                    </label>
+                  </div> 
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Drawing
+                    </label>
+                  </div> 
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Cycling
+                    </label>
+                  </div> 
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Social Media
+                    </label>
+                  </div> 
+              </div>
+              <div class="form-group">
+                  <p>Qualification:</p>
+                      <table>
+                        <tr>
+                            <th>
+                                S.No.
+                            </th>
+                            <th>
+                                Examination
+                            </th>
+                            <th>
+                                Board
+                            </th>
+                            <th>
+                                Percentage
+                            </th>
+                            <th>
+                                Year of Passing
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Class IX</td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="number" maxlength="2"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class X</td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="number" max="2"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Class XI</td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="number" max="2"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Class XII</td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="number" max="2"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>(10 char max)</td>
+                            <td>(upto 2 decimal)</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                  </div>
+                 <a href="submit.html"> <button type="button"  class="btn btn-success submit">Submit </button></a>
+                  <a href="index.html"><button type="button" class="btn btn-danger reset">Reset</button></a>
+              </div>
+          </form>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+  </body>
+</html>
