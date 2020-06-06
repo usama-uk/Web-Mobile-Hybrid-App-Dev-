@@ -184,7 +184,7 @@ else admin= false;
 if(admin) {
   page_model.find({}).sort({sorting : 1}).exec( function(err,result) {
 
-  res.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/pages.ejs',{
+  res.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/pages.ejs',{
   page : result,
   title: '',
   slug: '',
@@ -218,7 +218,7 @@ else admin= false;
 
 if(admin) {
 
-  res.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/admin_addpage.ejs'
+  res.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/admin_addpage.ejs'
   , {
 
     title: '',
@@ -255,7 +255,7 @@ var errors = req.validationErrors();
 
 
 if(errors) {
-res.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/admin_addpage.ejs', {
+res.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/admin_addpage.ejs', {
 
 errors: errors,
 title: title,
@@ -272,7 +272,7 @@ else {
   page_model.findOne( {slug : slug}  , function(err,result) {
 if(result) {
  console.log('error!');
- res.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/admin_addpage.ejs', {
+ res.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/admin_addpage.ejs', {
 
  errors: errors,
  title: title,

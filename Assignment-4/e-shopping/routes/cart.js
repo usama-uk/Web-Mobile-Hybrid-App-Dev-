@@ -2,8 +2,8 @@ var express = require('express');
 var app = express();
 var auth = require('../routes/auth.js');
 
-var product_model = require('/Users/asadbilal/Desktop/shoppingcart/public/models/product.js');
-var category_model = require('/Users/asadbilal/Desktop/shoppingcart/public/models/db_category.js');
+var product_model = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/models/product.js');
+var category_model = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/models/db_category.js');
 
 
 

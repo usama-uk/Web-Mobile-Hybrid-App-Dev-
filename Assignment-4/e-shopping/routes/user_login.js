@@ -1,5 +1,5 @@
 var express = require('express');
-var user_model = require('/Users/asadbilal/Desktop/shoppingcart/public/models/users.js');
+var user_model = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/models/users.js');
 var bcrypt = require('bcrypt');
 var passport = require('passport');
 

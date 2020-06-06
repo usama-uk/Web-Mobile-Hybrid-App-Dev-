@@ -1,18 +1,19 @@
-var express = require('express');  //main shit
+var express = require('express');  //main 
 var path = require('path');  //for directory path.join
 var mongoose = require('mongoose');  //connects database-mongo with node & express
-var router = require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-master/routes/page.js'); //simple connecting to route
-var router2= require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-master/routes/admin_page.js');  //simple connecting to route
-var router3 = require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-master/routes/admin_category.js');  //simple connecting to route
-var testroute = require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-master/routes/product.js');  //simple connecting to route
+var router = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/page.js'); //simple connecting to route
+var router2= require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-masterE:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/admin_page.js');  
+//simple connecting to route
+var router3 = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/admin_category.js');  //simple connecting to route
+var testroute = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/product.js');  //simple connecting to route
 var session = require('express-session');  //uses for session
 var express_v = require('express-validator');  //uses for post-validation.
-var page_model = require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-master/public/models/db_category.js');
-var page_model2 = require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-master/public/models/product.js');
-var arsenal = require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-master/routes/cart.js');
+var page_model = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/models/db_category.js');
+var page_model2 = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/models/product.js');
+var arsenal = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/cart.js');
 var bcrypt = require('bcrypt');
 var passport = require('passport');
-var user_model = require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-master/public/models/users.js');
+var user_model = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/models/users.js');
 var bodyParser = require('body-parser');
 
 
@@ -124,7 +125,7 @@ if(!req.session.cart) req.session.cart = [];
 next();
 });
 
-var user_login = require('/Users/asadbilal/Desktop/shoppingcart/routes/user_login.js');
+var user_login = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/user_login.js');
 
 app.use('/',router);
 app.use('/admin',router2);

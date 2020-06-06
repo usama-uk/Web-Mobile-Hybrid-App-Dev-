@@ -1,6 +1,6 @@
 var express = require('express');
-var page_model = require('/Users/asadbilal/Desktop/shoppingcart/public/models/product.js');
-var page_model2 = require('/Users/asadbilal/Desktop/shoppingcart/public/models/db_category.js');
+var page_model = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/models/product.js');
+var page_model2 = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/models/db_category.js');
 
 var app = express();
 var path = require('path');
@@ -11,7 +11,7 @@ var image_name;
 
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, '/Users/asadbilal/Desktop/shoppingcart/public/images')
+      cb(null, '/Users/asadbilal/Desktop/shoppingcartE:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/images')
     },
     filename: (req, file, cb) => {
       image_name = file.fieldname + '-' + Date.now()+'.jpg';
@@ -39,7 +39,7 @@ app.get('/',function(req,res) {
 
     page_model.find(function(err,z) {
 
-      res.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/product.ejs',{
+      res.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/product.ejs',{
         product:z , errors:''
       })
 
@@ -79,7 +79,7 @@ if(admin) {
 
 
   page_model2.find(function(err,ca) {
-    res.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/product_add.ejs'
+    res.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/product_add.ejs'
     , {
 
       title: '',
@@ -139,7 +139,7 @@ app.post('/add',upload.single('image') ,function(req,res) {
   if(errors) {
 
     page_model2.find(function(err,ca) {
-      res.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/product_add.ejs'
+      res.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/product_add.ejs'
       , {
 
         title: title,
@@ -218,7 +218,7 @@ app.get('/edit-product/:somecontent',function(req,ress) {
         var id = req.params.somecontent;
 
 
-          ress.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/product-edit.ejs'
+          ress.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/product-edit.ejs'
           , {
 
             title: res.title,
@@ -280,7 +280,7 @@ app.post('/edit-product/:somecontent',upload.single('image'),function(req,res) {
     var category;
       page_model2.find(function(err,resx){
 
-        res.render('//Users/asadbilal/Desktop/shoppingcart/views/layout/product-edit.ejs',{
+        res.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/product-edit.ejs',{
           title: req.body.title,
           desc: req.body.desc,
           price : req.body.price,
@@ -313,7 +313,7 @@ app.post('/edit-product/:somecontent',upload.single('image'),function(req,res) {
 
    //it already exists
 
-    res.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/product-edit.ejs',{
+    res.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/product-edit.ejs',{
       title: result.title,
       desc: result.desc,
       price : result.price,

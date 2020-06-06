@@ -1,6 +1,6 @@
 var express = require('express');
 
-var model = require('/Users/asadbilal/Desktop/shoppingcart/public/models/product.js');
+var model = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/models/product.js');
 
 var router = express.Router();
 
@@ -11,7 +11,7 @@ var multer = require('multer');
 
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, '/Users/asadbilal/Desktop/shoppingcart/public/images')
+      cb(null, 'E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/public/images')
     },
     filename: (req, file, cb) => {
       var image_name =  Date.now()+'.jpg';
@@ -81,7 +81,7 @@ router.get('/filter/:somecontent',function(req,ress) {
      var admin;
      if(req.user) if(req.user.admin == 1)admin = true;
      else admin = false;
-    ress.render('/Users/asadbilal/Desktop/shoppingcart/views/layout/display_product.ejs',
+    ress.render('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/views/layout/display_product.ejs',
 
     { asad : res,errors:'',boole: boole,admin: admin,name:req.user}
 
