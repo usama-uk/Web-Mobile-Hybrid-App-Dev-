@@ -1,0 +1,21 @@
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminheader.ejs') %>
+
+
+
+
+
+<h3 class="display-3"> Category a Page </h3>
+
+<form  method="post" action="/categories/edit-page/<%= slug %>">
+
+  <div class="form-group">
+      <label for""> Title : </label>
+      <input type="text" name="title" value = "<%= title %>" placeholder="title" class="form-control" />
+   <input type="hidden" name="id" value = "<%= id %>"  />
+
+</div>
+<button class="btn btn-primary" > Submit </button>
+
+</form>
+
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminfooter.ejs') %>

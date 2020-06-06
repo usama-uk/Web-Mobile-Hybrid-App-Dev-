@@ -1,0 +1,96 @@
+
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminheader.ejs') %>
+
+
+
+<br>
+
+
+<br>
+
+<h3 class="display-3" > Add a Product </h3>
+
+<br>
+<button class="btn btn-primary" href="/admin" > Back to admin </button>
+
+<br> <br>
+<form method="POST" action="/admin/product/add" enctype="multipart/form-data">
+
+  <div class="form-group">
+    <label for=""> Title </label>
+    <input type="text"  name="title" class='form-control' value="<%=title%>" placeholder="title" />
+  </div>
+
+
+
+  <div class="form-group">
+    <label for=""> Description </label>
+    <input type="text"  name="desc" value="<%=desc%>" class='form-control' placeholder="description">
+  </div>
+
+  <div class="form-group">
+    <label for=""> Category </label>
+
+   <select name="category" class="form-control" >
+  <% category.forEach(function(res) { %>
+<option> <%= res.title %> </option>
+
+
+
+
+<%    }); %>
+
+ </select>
+  </div>
+
+  <div class="form-group">
+    <label for=""> Price </label>
+    <input type="text"  name="price" value="<%=price%>" class='form-control' placeholder="price">
+  </div>
+
+  <div class="form-group">
+    <label for=""> Image </label>
+    <input type="file"  name="image" value="" id="img" class='form-control' placeholder="image">
+    <br>
+    <img src ="*" id="imgprev" alt" class="rounded" />
+  </div>
+
+<button class="btn btn-primary"> Submit </button> </form>
+
+<script>
+
+
+  function readd(file) {
+  if(file.files && file.files[0]) {
+
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+
+
+      $("#imgprev").attr('src',e.target.result).width(100).height(100);
+    }
+    reader.readAsDataURL(file.files[0]);
+  }
+
+
+
+  }
+
+  $("#img").change(function() {
+
+    readd(this);
+  });
+
+
+
+
+
+
+</script>
+
+
+
+
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminfooter.ejs') %>

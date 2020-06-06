@@ -1,0 +1,33 @@
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminheader.ejs'); %>
+
+<br>
+<img src="images/image-1533738413026.jpg"  >
+
+
+    <h3 class="display-3">Edit a Page </h3>
+    <br>
+    <a href="/admin" class="btn btn-primary" > Back to all pages </a>
+    <br> <br>
+
+  <form method="POST" action="/admin/pages/edit-page/<%=slug %>">
+
+    <div class="form-group">
+      <label for=""> Title </label>
+      <input type="text"  name="title" class='form-control' value="<%=title%>" placeholder="title" />
+    </div>
+
+    <div class="form-group">
+      <label for=""> Slug </label>
+      <input type="text"  name="slug" value="<%=slug%>" class='form-control' placeholder="slug">
+    </div>
+
+<div class="form-group">
+      <label for=''> Content </label>
+      <textarea rows="3" cols="30" name="content" class='form-control' placeholder="content"><%=content%></textarea>
+  <br> <br>
+
+  <input type="hidden" name="id" value = <%= id  %> />
+
+  <button class="btn btn-primary"> Submit </button>
+
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminfooter.ejs'); %>

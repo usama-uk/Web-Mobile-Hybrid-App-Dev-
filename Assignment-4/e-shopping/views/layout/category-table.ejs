@@ -1,0 +1,27 @@
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminheader.ejs') %>
+
+
+<br>
+<a class="btn btn-primary" href="categories/add"> Add a category </a>
+<br> <br>
+
+<table class="table table-striped">
+  <tr>
+    <th> title </th> <th> Edit </th> <th> Delete </th>
+  </tr>
+
+<% page.forEach(function(result) { %>
+  <tr>
+    <td>
+       <%=result.title %>
+     </td>
+     <td>
+      <a href="/categories/edit-page/<%= result.slug %>"> Edit </a>
+      </td>
+      <td>
+      <a href="/categories/delete-page/<%= result.id %>"> Delete </a>
+       </td>
+  </tr>
+<% } ); %>
+</table>
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminfooter.ejs') %>

@@ -1,0 +1,57 @@
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/header.ejs'); %>
+<br>
+<br> <div style="font-family: 'Oxygen', sans-serif;">
+
+
+
+<br>
+
+
+
+<div class="row"  >
+
+
+  <div class="col-md-3 col-sm-12">
+  <h3 class="text-center"> Categories </h3>
+
+
+    <ul class="list-group"  >
+    <li class="list-group-item" >
+     <i class="fas fa-chevron-circle-right"></i>
+     <a style="color: black;" href="/"> All products</a>
+   </li>
+    <% category.forEach(function(result) { %>
+     <li class="list-group-item">
+    <i class="fas fa-chevron-circle-right"></i>  <a style="color: black;" href="/filter/<%=result.title%>"> <%=result.title %></a>
+     </li>
+     <% }) %>
+
+    </ul>
+    <br/>
+
+  </div>
+
+<div class="col-md-9">
+  <h4 class="display-4"> <%= product.title %></h4> <hr />
+<img src="/images/<%=product.img %>" > <br />
+<h5 class="display-5"> Desc: <br /> </h5>
+<%= product.desc %>
+<br /><br />
+<% if(boole){%>
+
+  <a  href="/cart/<%=product.title%>"class="center btn btn-dark"  > Add to cart</a>
+<% } else { %>
+  <btn  class="center btn btn-dark"  > Login to Buy</btn>
+  <% } %>
+</div>
+</div>
+
+
+
+
+
+  </div>
+
+
+</div>
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/footer.ejs'); %>

@@ -1,0 +1,29 @@
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminheader.ejs'); %>
+
+<br>
+
+    <h3 class="display-3">Add a Page </h3>
+    <br>
+    <a href="/admin" class="btn btn-primary" > Back to all pages </a>
+    <br> <br>
+
+  <form method="POST" action="/admin/pages/add-page">
+
+    <div class="form-group">
+      <label for=""> Title </label>
+      <input type="text"  name="title" class='form-control' value="<%=title%>" placeholder="title" />
+    </div>
+
+    <div class="form-group">
+      <label for=""> Slug </label>
+      <input type="text"  name="slug" value="<%=slug%>" class='form-control' placeholder="slug">
+    </div>
+
+<div class="form-group">
+      <label for=''> Content </label>
+      <textarea rows="3" cols="30" name="content" class='form-control ckeditor' placeholder="content"><%=content%></textarea>
+  <br> <br>
+
+  <button class="btn btn-primary"> Submit </button>
+
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminfooter.ejs'); %>

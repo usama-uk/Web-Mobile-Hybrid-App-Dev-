@@ -1,0 +1,137 @@
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/header.ejs'); %>
+<br>
+<br> <div style="font-family: 'Oxygen', sans-serif;">
+
+
+
+<br>
+
+
+
+
+<div class="row" >
+
+
+  <div class="col-md-3 ">
+  <h3 class="text-center" style="font-family : Russo One"> Categories </h3>
+
+
+    <ul class="list-group"  >
+    <li class="list-group-item" >
+     <i class="fas fa-chevron-circle-right"></i>
+     <a style="color: black;" href="/"> All products</a>
+   </li>
+    <% category.forEach(function(result) { %>
+     <li class="list-group-item">
+    <i class="fas fa-chevron-circle-right"></i>  <a style="color: black;" href="/filter/<%=result.title%>"> <%=result.title %></a>
+     </li>
+     <% }) %>
+
+    </ul>
+    <br/>
+
+  </div>
+
+
+
+      <% asad.forEach(function(res){ %>
+
+
+      <%
+
+      if( count % 4 == 0) { count =2;  %>
+
+
+          <div class="col-md-3   ">
+
+          </div>
+
+          <div class="col-md-3  " >
+
+
+
+
+            <div class="card  ">
+
+
+                <a id="pleasenot" class="productdetail" href="/product-details/<%= res.title %>">
+
+                    <p style="display: none;position: absolute; padding : 5em; font-family:Oswald; color: white;" >
+                    Click here for Details
+                  </p>
+                   <img  src="/images/<%= res.img %>" style="  width:100%;height: 10em; ">
+
+                 </a>
+            <div class="card-body">
+              <h4 class="card-title"><%= res.title %></h4>
+              <p class="card-text">
+                Some quick example text to build on the card title
+                and make up the bulk of the card's content.
+              </p>
+              <%if(boole) { %>
+              <a href="/cart/<%=res.title%>" class="btn btn-dark">Add to Cart </a>
+            <%  }
+              else { %>
+                  <a href="" class="btn btn-dark">You must login to Buy </a>
+              <%}%>
+
+            </div>
+          </div>
+
+
+
+          </div>
+
+        <%  }
+
+        else  {
+
+           count++;
+          %>
+        <div class="col-md-3 " >
+
+
+
+    <div class="card  ">
+
+
+        <a id="pleasenot" class="productdetail" href="/product-details/<%= res.title %>">
+
+            <p style="display: none;position: absolute; padding : 5em; font-family:Oswald; color: white;" >
+            Click here for Details
+          </p>
+           <img  src="/images/<%= res.img %>" style="  width:100%;height: 10em; ">
+
+         </a>
+    <div class="card-body">
+      <h4 class="card-title"><%= res.title %></h4>
+      <p class="card-text">
+        Some quick example text to build on the card title
+        and make up the bulk of the card's content.
+      </p>
+      <%if(boole) { %>
+      <a href="/cart/<%=res.title%>" class="btn btn-dark">Add to Cart </a>
+    <%  }
+      else { %>
+          <a href="" class="btn btn-dark">You must login to Buy </a>
+      <%}%>
+    </div>
+  </div>
+
+
+
+
+
+
+            <br />
+        </div>
+
+    <%  }} ) %>
+  </div>
+
+
+
+
+
+</div>
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/footer.ejs'); %>

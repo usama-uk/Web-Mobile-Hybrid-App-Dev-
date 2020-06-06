@@ -1,0 +1,86 @@
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/header.ejs'); %>
+<br>
+<br> <div style="font-family: 'Oxygen', sans-serif;">
+
+<% if (typeof productbuying == 'undefined') productbuying =''; %>
+
+<br>
+
+
+
+<div class="row" >
+
+
+  <div class="col-md-3 ">
+  <h3 class="text-center" style="font-family : Russo One"> Categories </h3>
+
+
+    <ul class="list-group"  >
+    <li class="list-group-item" >
+     <i class="fas fa-chevron-circle-right"></i>
+     <a style="color: black;" href="/"> All products</a>
+   </li>
+    <% category.forEach(function(result) { %>
+     <li class="list-group-item">
+    <i class="fas fa-chevron-circle-right"></i>  <a style="color: black;" href="/filter/<%=result.title%>"> <%=result.title %></a>
+     </li>
+     <% }) %>
+
+    </ul>
+    <br/>
+
+  </div>
+
+
+<% if( productbuying == 'undefined' || productbuying =='') { %>
+
+  <h3 class="display-3 " style="font-family : Oswald;"> Cart is Empty</h3>
+
+  <% } else { %>
+<div class="col-md-9">
+  <table class="table table-striped">
+    <tr>
+      <th> Image </th> <th> Quantity </th><th>Price
+      </th> <th> Title </th> <th> Modify </th>  <th> Aggregate </th>
+    </tr>
+
+  <% productbuying.forEach(function(result) { %>
+    <tr>
+      <td>
+         <img src="/images/<%=result.img %>" style="width:5em; " >
+       </td>
+       <td>
+          <%=result.qty %>
+        </td>
+        <td>
+           <%=result.price %>
+         </td>
+        <td>
+           <%=result.title %>
+         </td>
+       <td>
+        <a href="/cart/sortplus/<%=result.title%>" > + </a> <a href="/cart/sortminus/<%= result.title%>"> - </a><a href="/cart/sortdestroy/<%= result.title%>"> Clear </a>
+        </td>
+        <td>
+        <%=  result.price * result.qty %>
+         </td>
+    </tr>
+    <p style ="display : none;">
+    <%= total += result.price * result.qty %>
+    </p>
+
+  <% } ); %>
+
+  </table>
+  <h4 class="display-4 ">Total : <%=total %>$</h4>
+
+
+
+</div>
+<% } %>
+
+  </div>
+
+
+</div>
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/footer.ejs'); %>

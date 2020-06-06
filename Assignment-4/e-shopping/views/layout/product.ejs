@@ -1,0 +1,39 @@
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminheader.ejs'); %>
+
+
+<a href="/admin/product/add" class="btn btn-primary" > Add a product </a>
+<br><br>
+
+<table class="table table-striped">
+  <thead class="thead-dark"
+  <tr>
+    <th> Title </th> <th> Category </th> <th> Image </th> <th> Price </th><th> Edit </th><th> Delete </th>
+  </tr>
+</thead>
+
+<% product.forEach(function(result) { %>
+  <tr>
+    <td>
+       <%=result.title %>
+     </td>
+     <td>
+        <%=result.category %>
+      </td>
+      <td>
+         <img src="/images/<%=result.img%>" style="width:2em; height:3em;" />
+       </td>
+       <td>
+          <%=result.price %>
+        </td>
+     <td>
+      <a href="/admin/product/edit-product/<%=result._id%>"> Edit </a>
+      </td>
+      <td>
+      <a href="/admin/product/delete-product/<%= result._id %>"> Delete </a>
+       </td>
+  </tr>
+<% } ); %>
+</table>
+
+
+<%- include('/Users/asadbilal/Desktop/shoppingcart/views/layout/adminfooter.ejs'); %>
