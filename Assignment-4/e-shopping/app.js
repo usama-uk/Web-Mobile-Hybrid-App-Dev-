@@ -1,8 +1,11 @@
 var express = require('express');  //main 
 var path = require('path');  //for directory path.join
+
 var mongoose = require('mongoose');  //connects database-mongo with node & express
+
 var router = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/page.js'); //simple connecting to route
-var router2= require('C:/Users//UK/Downloads/Compressed/Dummy_daraz-masterE:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/admin_page.js');  
+
+var router2= require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/admin_page.js');  
 //simple connecting to route
 var router3 = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/admin_category.js');  //simple connecting to route
 var testroute = require('E:/Web Dev and Hybrid Mob App/Usama-Khalid/Web&Mobile Hybrid Application/Assignment-4/e-shopping/routes/product.js');  //simple connecting to route
