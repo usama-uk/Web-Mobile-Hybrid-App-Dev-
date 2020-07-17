@@ -1,0 +1,38 @@
+.c1,.c2,.c3,.c4,.c5,.c6,.c9,.c12,.c14,.c17{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    border-radius: 15px !important;
+    background-color: teal !important;
+    box-shadow: #CDBF99FF !important;
+    font-size: 35px !important;
+    padding: 5px;
+    margin: 5px;
+}
+button:hover{
+    background-color: #CDBF99FF !important;
+    color: teal !important;
+    cursor: pointer;
+    border-radius: 15px;
+    text-decoration: none;
+}
+h3{
+    background-color: teal;
+    color: white;
+    margin: 0;
+    font-size: 43px !important;
+}
+h5{
+    font-size: 33px !important;
+    background-color: #CDBF99FF;
+}
+
+.footer{
+    font-size: 22px !important;
+
+}

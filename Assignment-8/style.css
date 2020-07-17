@@ -1,0 +1,54 @@
+html { 
+    background: url(a.jpg) no-repeat center fixed; 
+    background-size: cover;
+  }
+body{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+h1{
+margin-top: 0;
+    background-color: sienna;
+    font-size: 52px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#two{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+}
+h2{
+    font-size: 80px;
+    margin: 6px;
+    padding: 2px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    background-color: black;
+    color: sienna;
+}
+#three{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2px;
+    padding: 2px;
+}
+button{
+    height: 70px;
+    width: 100px;
+    margin: 6px;
+    padding: 2px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: sienna;
+    color: black;
+}
