@@ -1,0 +1,101 @@
+*{
+    max-width: 10000px;
+    min-width: 50px;
+    margin: 0;
+    color: whitesmoke;
+}
+
+body{
+    background-color: #0a81f8;
+}
+
+.stepone, h1{
+    font-family: 'Times New Roman', Times, serif;
+    max-height: 500px;
+    min-height: 90px;
+    background-color: #05386b;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 55px; 
+}
+
+/* Georgia,  */
+.steptwo, h2{
+    font-family: 'Times New Roman', Times, serif;
+    max-height: 500px;
+    height: 60px;
+    min-height: 60px;
+    background-color: #064788;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+
+.stepthree{
+
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    color: whitesmoke;
+    font-family:'calibri';
+}
+
+
+.three1, .three2, .three3, .three4,  .three5,  .three6, .three7{
+    border: 6px solid #0a81f8;
+    border-radius: 50px;
+    /* width: 250px; */
+    padding-top: 30px;
+    background-color: rgb(53, 110, 163);
+    font-size: 20px;
+ text-decoration: none;
+ min-width: 300px;
+ max-width: 300px;
+ min-height: 400px;
+ max-height: 400px;
+}
+
+.three1:hover, .three2:hover, .three3:hover, .three4:hover, .three5:hover, .three6:hover, .three7:hover{
+    background-color: #064788; 
+}
+
+.threestatus, h5{
+    font-size: 20px;
+    padding-top: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: auto;
+    color: rgb(161, 159, 159);
+}
+.h5{
+    margin-bottom: 0;
+    margin-top: auto;
+}
+a{
+    text-decoration: none;
+}
+
+.footer, h6{
+    background-color: rgb(51, 60, 68);
+    margin-bottom: 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-size-adjust: 100%;
+    padding: auto auto 0px auto;
+    margin: auto auto 0px auto;
+    color: rgb(161, 159, 159);
+    font-size: 17px;
+}
